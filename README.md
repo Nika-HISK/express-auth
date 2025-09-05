@@ -2,22 +2,22 @@
 
 This is a complete authentication service built with **Express.js**, **MySQL**, and **Sequelize ORM**. It includes user registration, login, and logout with **JWT-based authentication**, along with input validation using **Joi** and comprehensive security features.
 
-## 🚀 Features
+## Features
 
-- ✅ User registration & login
-- ✅ **Secure logout with token blacklisting**
-- ✅ JWT access token generation
-- ✅ Secure password hashing with bcrypt
-- ✅ Input validation using Joi
-- ✅ **Automatic cleanup of expired tokens**
-- ✅ Role-based access control (USER/ADMIN)
-- ✅ User management (CRUD operations)
-- ✅ Ban/Unban functionality
-- ✅ Comprehensive error handling
-- ✅ Security middleware (helmet, cors, rate limiting)
-- ✅ Soft deletes with Sequelize paranoid mode
+- User registration & login
+- **Secure logout with token blacklisting**
+- JWT access token generation
+- Secure password hashing with bcrypt
+- Input validation using Joi
+- **Automatic cleanup of expired tokens**
+- Role-based access control (USER/ADMIN)
+- User management (CRUD operations)
+- Ban/Unban functionality
+- Comprehensive error handling
+- Security middleware (helmet, cors, rate limiting)
+- Soft deletes with Sequelize paranoid mode
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Express.js** – Fast, unopinionated web framework
 - **Sequelize** – Promise-based ORM for MySQL
@@ -27,11 +27,11 @@ This is a complete authentication service built with **Express.js**, **MySQL**, 
 - **bcrypt** – Password hashing
 - **node-cron** – For automated token cleanup
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/Nika-HISK/express-auth.git
 cd express-authentication-service
 
 # Install dependencies
@@ -49,7 +49,7 @@ npm run dev
 npm start
 ```
 
-## 🔧 Environment Variables
+## Environment Variables
 
 Create a `.env` file in your project root:
 
@@ -70,7 +70,7 @@ JWT_SECRET=your_super_secret_jwt_key
 JWT_ACCESS_EXP=1h
 ```
 
-## 📋 API Endpoints
+## API Endpoints
 
 ### Authentication
 
@@ -177,7 +177,7 @@ PATCH /users/:id/unban
 Authorization: Bearer <admin-jwt-token>
 ```
 
-## 🔐 Authentication Flow
+## Authentication Flow
 
 ### **Login Process**
 1. User provides email and password
@@ -200,7 +200,7 @@ Authorization: Bearer <admin-jwt-token>
 4. Future requests with this token are rejected
 5. **Expired blacklisted tokens are automatically cleaned up daily**
 
-## 🛡 Security Features
+## Security Features
 
 - **Immediate Token Invalidation**: Logout instantly invalidates tokens
 - **Password Security**: Uses bcrypt with configurable salt rounds
@@ -213,7 +213,7 @@ Authorization: Bearer <admin-jwt-token>
 - **CORS Protection**: Configurable CORS policy
 - **Automatic Cleanup**: Daily cleanup of expired tokens
 
-## 🧪 Testing the API
+## Testing the API
 
 ### Complete Test Flow:
 
@@ -259,7 +259,7 @@ curl -X GET http://localhost:3000/users/1 \
 
 **Expected Result:** Step 5 should return `401 Unauthorized` with message "Token has been invalidated"
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -284,20 +284,16 @@ src/
 └── app.js                       # Main application file
 ```
 
-## 🔒 Password Requirements
+## Password Requirements
 
 - Minimum 8 characters
 - At least one uppercase letter
 - At least one number
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
