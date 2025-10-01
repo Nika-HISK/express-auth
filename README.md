@@ -30,11 +30,9 @@ This is a complete authentication service built with **Express.js**, **MySQL**, 
 ## Installation & Setup
 
 ```bash
-# Clone the repository
 git clone https://github.com/Nika-HISK/express-auth.git
 cd express-authentication-service
 
-# Install dependencies
 npm install
 
 # Copy environment file
