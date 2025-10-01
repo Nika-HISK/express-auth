@@ -35,15 +35,10 @@ cd express-authentication-service
 
 npm install
 
-# Copy environment file
 cp .env.example .env
 
-# Configure your .env file with database credentials and JWT secret
-
-# Start development server
 npm run dev
 
-# Or start production server
 npm start
 ```
 
